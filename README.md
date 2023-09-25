@@ -12,9 +12,9 @@ CTRhythm consists of four modules in order:
 4. Classification Module: this module employs a global average pooling layer, a linear layer and a SoftMax layer to provide classification results and prediction scores.
 
 ## Data
-The CINC2017 original data are available in PhysioNet: https://physionet.org/content/challenge-2017/1.0.0/
+The CINC2017 original data is available in PhysioNet: https://physionet.org/content/challenge-2017/1.0.0/
 
-The CPSC2018 original data are available in ICBEB 2018: http://2018.icbeb.org/Challenge.html
+The CPSC2018 original data is available in ICBEB 2018: http://2018.icbeb.org/Challenge.html
 
 
 
