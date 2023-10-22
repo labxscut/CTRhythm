@@ -14,7 +14,6 @@ CTRhythm consists of four modules in order:
 ## Data
 The CINC2017 original data is available in PhysioNet: https://physionet.org/content/challenge-2017/1.0.0/
 
-The CPSC2018 original data is available in ICBEB 2018: http://2018.icbeb.org/Challenge.html
 
 
 
