@@ -1,8 +1,6 @@
-
 import math
 import torch
 from torch import nn
-
 
 class Residual1(nn.Module):
     def __init__(self, channelInput=32, channel=32, stride=2, dropout=0.3):
@@ -84,7 +82,7 @@ class TransformerEncoder(nn.Module):
         x = self.fc(x)  # [batch_size, num_classes]
         return x
 
-class CTR(nn.Module):
+class CTRhythm(nn.Module):
     def __init__(self, d_in,d_model, nhead, num_layers, dim_feedforward, dropout=0.1):
         super().__init__()
         self.main = nn.Sequential(
@@ -92,7 +90,6 @@ class CTR(nn.Module):
             TransformerEncoder(d_in,d_model, nhead, num_layers, dim_feedforward, dropout)
         )
     def forward(self, x):
-        x = x.unsqueeze(1)
         x = self.main(x)
         return x
 
@@ -115,14 +112,3 @@ class PositionalEncoding(nn.Module):
         x = x + self.pe[:x.size(0), :]  # Add positional encoding
         x = self.dropout(x)  # Apply dropout
         return x
-
-if __name__ == '__main__':
-    d_in = 32
-    d_model = 32
-    nhead = 8
-    num_layers = 6
-    dim_feedforward = 256
-    model = CTR(d_in,d_model, nhead, num_layers, dim_feedforward, dropout=0.1)
-    ecgin = torch.rand([1,9000])
-    out = model(ecgin)
-    print(out.shape)
