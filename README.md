@@ -3,7 +3,8 @@
 
 ## Summary
 We developed a CNN and transformer-based model, CTRhythm, for the accurate detection of AF using single-lead ECG data.
-![图片](https://github.com/labxscut/CTRhythm/assets/131430090/21504a38-afde-45c7-9e02-bd6bcef60f48)
+
+![图片](https://github.com/labxscut/CTRhythm/assets/131430090/335af19e-9945-480d-81bb-79e34546e92c)
 
 
 CTRhythm consists of four modules in order: 
