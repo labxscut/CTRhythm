@@ -77,7 +77,7 @@ if __name__ == '__main__':
         train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
         test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
-        model = CTRhythm(32, d_model, nhead, num_layers, dim_feedforward, dropout=0.1)
+        model = CTRhythm(channel_in = 1, d_model = d_model, nhead = nhead, num_layers = num_layers, dim_feedforward = dim_feedforward, num_classes = num_classes, dropout=0.1)
         model.to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
