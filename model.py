@@ -35,6 +35,28 @@ class ResidualBlock(nn.Module):
             x = self.skip(x)
         x = y + x   
         return x
+class CNNModule(nn.Module):
+    def __init__(self, channel_in = 1,downsample_depth = 5, main_depth = 1 ,dropout=0.3):
+        super().__init__()
+        
+        self.downsample_layers = nn.Sequential(
+            ResidualBlock(channel_in, 16, 2, dropout),
+            ResidualBlock(16, 32, 2, dropout),
+        )
+        self.main = nn.Sequential(
+            ResidualBlock(dropout = dropout)
+        )
+        if downsample_depth > 2:
+            for i in range(downsample_depth - 2):
+                self.downsample_layers.append(ResidualBlock(32,32,2,dropout=dropout))
+        if main_depth > 1:
+            for i in range(main_depth - 1):
+                self.downsample_layers.append(ResidualBlock(32,32,1,dropout=dropout))
+
+    def forward(self, x):
+        x = self.downsample_layers(x)
+        x = self.main(x) # [batch_size, d_model, seq_len]
+        return x
 
 class PositionalEncoding(nn.Module):
     def __init__(self, d_in,d_model, dropout=0.1, max_len=10000):
