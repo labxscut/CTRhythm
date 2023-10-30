@@ -3,13 +3,13 @@
 
 ## Summary
 We developed a CNN and transformer-based model, CTRhythm, for the accurate detection of AF using single-lead ECG data.
-![image](https://github.com/labxscut/CTRhythm/assets/131430090/a0cc47f2-8f72-4cc0-850b-bcac9d4d412d)
+![图片](https://github.com/labxscut/CTRhythm/assets/131430090/41bc9e74-d57e-4a9e-a0f1-c4cd459cfa45)
 
 CTRhythm consists of four modules in order: 
-1. 1D Convolutional Neural Network (CNN) Module: this module downsamples the input ECG sequence and captures local patterns with CNN encoders;
-2. Position Encoding Module: this module applies positional encoding to the CNN-encoded sequence to incorporate the position information; 
-3. Transformer Encoder Module: this module carries out attention-based learning of long-range dependency using position-CNN-encoded sequence;
-4. Classification Module: this module employs a global average pooling layer, a linear layer and a SoftMax layer to provide classification results and prediction scores.
+①	1D Convolutional Neural Network Module (1-D CNN): this module downsamples the input ECG sequence and aggregates local patterns using CNN (Fig. 2b); 
+②	Position Encoding Module: this module applies positional encoding to the CNN-encoded sequence to incorporate contextual position information (Fig. 2a);
+③	Transformer Encoder Module: this module performs attention-based learning of long-range dependencies using the position-CNN-encoded sequence (Fig. 2d);
+④	Classification Module: this module consists of a global average pooling layer, a linear layer, and a SoftMax layer to generate prediction scores and labels (Fig. 2a).
 
 ## Data
 The CINC2017 original data is available in PhysioNet: https://physionet.org/content/challenge-2017/1.0.0/
