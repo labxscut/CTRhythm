@@ -13,6 +13,9 @@ CTRhythm consists of four modules in order:
 
 ## Data
 The CINC2017 is available at: https://physionet.org/content/challenge-2017/1.0.0/
+
 The Chapman is available at https://physionet.org/content/ecg-arrhythmia/1.0.0/ 
+
 The CPSC2018 is available at http://2018.icbeb.org/Challenge.html
+
 The MIMIC-IV-ECG is available at https://physionet.org/content/mimic-iv-ecg/1.0/
