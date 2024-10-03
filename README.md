@@ -1,7 +1,7 @@
 # CTRhythm: Accurate Atrial Fibrillation Detection from Single-Lead ECG Rhythm by Convolutional Neural Network and Transformer Integration
 
 ## Summary
-We developed a CNN and transformer-based model, CTRhythm, for the accurate detection of AF using single-lead ECG data. We conducted cross-validation on CINC2017 and external validation on CPSC2018 and Chapman, and also explored pre-training improvements using MIMIC MIMIC-IV-ECG.
+We developed a CNN and transformer-based model, CTRhythm, for the accurate detection of AF using single-lead ECG data. We conducted cross-validation on CINC2017 and external validation on CPSC2018 and Chapman, and also explored pre-training improvements using MIMIC-IV-ECG.
 
 ![image](./fig1.svg)
 
