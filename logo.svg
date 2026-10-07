@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="CTRhythm logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(255, 62%, 72%)"/>
+      <stop offset="1" stop-color="hsl(283, 55%, 34%)"/>
+    </linearGradient>
+    <clipPath id="frame"><rect x="4" y="4" width="120" height="120" rx="28"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+  <g clip-path="url(#frame)">
+    <circle cx="44" cy="52" r="9" fill="#ffffff" opacity="0.92"/><circle cx="84" cy="40" r="7" fill="#ffffff" opacity="0.75"/><circle cx="80" cy="82" r="11" fill="#ffffff" opacity="0.92"/><path d="M44 52 84 40M44 52 80 82M84 40 80 82" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
+  </g>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="none" stroke="hsl(75, 45%, 40%)" stroke-width="2" opacity="0.5"/>
+</svg>
